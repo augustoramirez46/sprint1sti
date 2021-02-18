@@ -1,0 +1,35 @@
+document.querySelector('.csv-file').addEventListener('change', upload, false);
+var data = null;
+
+function upload(evt) {
+
+    console.log('a');
+    
+    var file = evt.target.files[0];
+    var reader = new FileReader();
+    reader.readAsText(file);
+    reader.onload = function(event) {
+        
+        var csvData = event.target.result;
+
+        data = Papa.parse(csvData, {header : true});
+
+        console.log(data);
+    }
+    
+};
+
+function viewArray() {
+   
+    data.forEach(e => console.log(`${e.Nombre} ${e.Edad} ${e.Altura}`));
+};
+
+
+document.getElementById('01_maymen').addEventListener('click', sort0101);
+function sort0101() {
+    console.log('0101');
+    data.sort((a, b) => {
+        return a.Edad - b.Edad;
+    })
+    console.log(data);
+};

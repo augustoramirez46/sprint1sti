@@ -1,0 +1,10 @@
+* {
+    background-color: rgb(61, 66, 66);
+
+
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
