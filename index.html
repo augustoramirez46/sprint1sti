@@ -8,14 +8,34 @@
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
-    <input type="file" class="csv-file" name="files" accept=".csv"/>
+    <div class="sprint1 sprint">
+        <input type="file" class="csv-file1" name="files" accept=".csv"/>
 
-    <button id="01_maymen"> Edad descendiente </button>
-    <button id="01_menmay"> Edad ascendiente </button>
-    <button id="02_maymen"> Estatura descendiente </button>
-    <button id="02_menmay"> Estatura ascendiente </button>
+        <div class="sprint1_buttons">
+            <button id="01_maymen"> Edad descendiente </button>
+            <button id="01_menmay"> Edad ascendiente </button>
+            <button id="02_maymen"> Estatura descendiente </button>
+            <button id="02_menmay"> Estatura ascendiente </button>
+        </div>
 
+        <div class="sprint1_list_itemContainer"></div>
+    </div>
+
+    <div class="sprint2 sprint">
+        <input type="file" class="csv-file2" name="files" accept=".csv"/>
+        <div class="list-select">
+            <label for=""> Persona 1 <select name="P1" class="persona1" ></select></label>
+            <label for=""> Persona 2 <select name="P2" class="persona2" ></select></label>
+        </div>
+        <div class="results">
+            <button class="execute"> Testear similitud </button>
+            <p class="results-text"></p>
+
+        </div>
+        
+    </div>
     <script src="./PapaParse-5.0.2/papaparse.min.js"></script>
     <script src="./scripts/main.js"></script>
+    <script src="./scripts/sprint2.js"></script>
 </body>
 </html>
