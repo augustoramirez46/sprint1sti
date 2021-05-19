@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: rgb(27, 34, 71);
+    background-color: rgb(50, 61, 54);
     display: flex;
     flex-direction: row;
     list-style: none;
@@ -30,12 +30,17 @@ select {
 }
 
 .sprint1 {
-    background-color: rgb(65, 60, 70);
+    background-color: rgb(65, 65, 68);
 
 }
 
 .sprint2 {
-    background-color: rgb(78, 74, 88);
+    background-color: rgb(65, 65, 68);
+
+}
+
+.sprint3 {
+    background-color: rgb(65, 65, 68);
 
 }
 
