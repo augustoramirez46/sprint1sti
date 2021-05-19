@@ -52,8 +52,6 @@ function sort0101() {
         htmlList.appendChild(newItem);
     }
     
-
-
     console.log(byAge);
 
 };

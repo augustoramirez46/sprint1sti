@@ -87,6 +87,7 @@ button3.addEventListener('click', function() {
    // var b = list2.options[list2.selectedIndex].value;
 
     let copyA = dataS3.slice();
+    resultInfo = [];
    // let copyB = dataS2.slice();
 
 
@@ -186,62 +187,49 @@ button3.addEventListener('click', function() {
 
             resultInfo.push({
                 Nombre: `${element.Nombre}`,
-                Similaridad: `${similarity}`
+                Similaridad: parseFloat(similarity),
+                id: i
             });
-
-        console.log(pPunto);
-
-       
-        
-    }
+            
+        }
+        sortPizza(resultInfo);
+        addResultList3(a);
+        console.log(resultInfo);
     
 return;
-    pPunto = 
-    (copyA[a].a*copyB[b].a) + 
-    (copyA[a].b*copyB[b].b) + 
-    (copyA[a].c*copyB[b].c) + 
-    (copyA[a].d*copyB[b].d) + 
-    (copyA[a].e*copyB[b].e);
-
-    console.log(pPunto);
-
-    let magnitudeA;
-
-    magnitudeA = Math.sqrt(
-        (copyA[a].a*copyA[a].a)+
-        (copyA[a].b*copyA[a].b)+
-        (copyA[a].c*copyA[a].c)+
-        (copyA[a].d*copyA[a].d)+
-        (copyA[a].e*copyA[a].e)
-    );
-
-    let magnitudeB;
-
-    magnitudeB = Math.sqrt(
-        (copyB[b].a*copyB[b].a)+
-        (copyB[b].b*copyB[b].b)+
-        (copyB[b].c*copyB[b].c)+
-        (copyB[b].d*copyB[b].d)+
-        (copyB[b].e*copyB[b].e)
-    );
-
-    let similarity;
-
-    similarity = pPunto / ((magnitudeA)*(magnitudeB));
-
-    console.log(similarity);
-
-    results.innerHTML = 
-    `Producto Punto= ${pPunto} <br>
-    Magnitud Persona 1= ${magnitudeA} <br>
-    Magnitud Persona 2= ${magnitudeB} <br>
-    Similaridad= ${similarity}`;
-
-    
-/*
-    var aData = getDataFromData(a);
-    var bData = getDataFromData(b);
-
-    console.log(aData)*/
+  
 
 })
+
+function sortPizza(elem) {
+    results3.innerHTML = '';
+
+    var byPizza = elem.slice();
+
+    byPizza.sort(function (a, b) {
+        return b.Similaridad - a.Similaridad;
+    });
+
+    resultInfo = byPizza;
+    
+};
+
+function addResultList3(index) {
+
+    for (let i = 0; i <= k; i++) {
+        
+        const element = resultInfo[i];
+
+        if(element.id != index){
+            console.log(element);
+            
+            const newItem = document.createElement('li');
+            newItem.classList.add('s3-list-item')
+            newItem.innerHTML = 
+            `Nombre: ${element.Nombre}<br>Similaridad: ${element.Similaridad*100}% `
+            results3.appendChild(newItem);
+        }
+        
+    }
+
+}
