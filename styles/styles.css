@@ -9,6 +9,7 @@ body {
     display: flex;
     flex-direction: row;
     list-style: none;
+    height: 100vh;
 }
 
 button {
@@ -42,10 +43,63 @@ select {
 .sprint3 {
     background-color: rgb(65, 65, 68);
 
+
+}
+
+.results {
+    height: 100%;
+}
+
+.results-text3 {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
 }
 
 .s3-list-item {
-    margin: 1em auto 0em auto;
+    margin: .5em auto 0em auto;
+    padding: 2em 2em;
+    border-radius: 25px;
+    color: rgb(23, 24, 24);
+
+}
+
+.s3-list-item:nth-child(1) {
+    background-color: rgb(186, 245, 128);
+    height: 33%;
+    width: 80%;
+    font-size: 1.5em;
+}
+
+.s3-list-item:nth-child(2) {
+    background-color: rgb(220, 241, 149);
+    height: 20%;
+    width: 70%;
+    font-size: 1.4em;
+}
+
+.s3-list-item:nth-child(3) {
+    background-color: rgb(250, 223, 160);
+    height: 18%;
+    width: 65%;
+    font-size: 1.3em;
+}
+
+.s3-list-item:nth-child(4) {
+    background-color: rgb(240, 205, 164);
+    height: 10%;
+    width: 60%;
+    height: fit-content;
+    font-size: 1.2em;
+}
+
+.s3-list-item:nth-child(5) {
+    background-color: rgb(221, 161, 133);
+    height: fit-content;
+    width: 50%;
+    font-size: .8em;
+
 }
 
 .list-select {

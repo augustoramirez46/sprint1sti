@@ -226,7 +226,7 @@ function addResultList3(index) {
             const newItem = document.createElement('li');
             newItem.classList.add('s3-list-item')
             newItem.innerHTML = 
-            `Nombre: ${element.Nombre}<br>Similaridad: ${element.Similaridad*100}% `
+            `${element.id}<br><strong style="color: rgb(23, 24, 24)">${element.Nombre}</strong><br>Similaridad:<br><strong style="color: rgb(23, 24, 24)">${element.Similaridad*100}%</strong> `
             results3.appendChild(newItem);
         }
         
